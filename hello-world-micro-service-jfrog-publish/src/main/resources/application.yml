@@ -1,0 +1,19 @@
+server:
+  port: 8098
+
+
+spring:
+  application:
+    name: checkout-service
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+
+checkout:
+  greetings: hello through Feign
+  database:
+    name: jdbc:oracle:thin:@//localhost:1521/balajiXDB
+    port: 1521
+    username: system
+    password: balaji

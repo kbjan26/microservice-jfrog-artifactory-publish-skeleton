@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+      application:
+          name: student-service
+      main:
+        allow-bean-definition-overriding: true
+      jpa:
+        database-platform: org.hibernate.dialect.Oracle10gDialect
+
+checkout:
+  greetings: hello
+  database:
+    name: jdbc:oracle:thin:@//localhost:1521/balajiXDB
+    port: 1521
+    username: system
+    password: balaji
+
+eureka:
+  instance:
+    preferIpAddress: false

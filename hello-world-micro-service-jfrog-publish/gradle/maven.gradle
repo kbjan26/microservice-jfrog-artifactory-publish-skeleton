@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        maven {
+            url 'http://127.0.0.1:8040/artifactory/libs-release'
+            credentials {
+                username = "admin"
+                password = "password"
+            }
+        }
+    }
+}
+
+apply plugin: 'maven-publish'
+
+artifactory {
+    contextUrl = "http://127.0.0.1:8040/artifactory"
+    //The base Artifactory URL if not overridden by the publisher/resolver
+    publish {
+        repository {
+            repoKey = 'libs-release'
+            username = "admin"
+            password = "password"
+            maven = true
+
+        }
+        defaults {
+            publications('mavenJava')
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
