@@ -1,4 +1,4 @@
-package com.ecommerce.supermarket.checkout.config;
+package com.micro.service.helloworld.config;
 
 import lombok.Data;
 import lombok.NonNull;
@@ -13,7 +13,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @Component
 @Validated
-public class CheckoutProperties {
+public class HelloWorldProperties {
 
      @Valid
      private String greetings;

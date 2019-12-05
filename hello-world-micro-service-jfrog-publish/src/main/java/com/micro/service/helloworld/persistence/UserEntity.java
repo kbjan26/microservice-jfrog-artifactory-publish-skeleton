@@ -1,4 +1,4 @@
-package com.ecommerce.supermarket.checkout.persistence;
+package com.micro.service.helloworld.persistence;
 
 import lombok.*;
 

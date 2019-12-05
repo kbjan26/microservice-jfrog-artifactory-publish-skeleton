@@ -1,4 +1,4 @@
-package com.ecommerce.supermarket.checkout.persistence;
+package com.micro.service.helloworld.persistence;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

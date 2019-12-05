@@ -1,4 +1,4 @@
-package com.ecommerce.supermarket.checkout;
+package com.micro.service.helloworld;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -10,10 +10,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableAutoConfiguration
 @EnableDiscoveryClient
 @Slf4j
-public class CheckoutApplication {
+public class HelloWorldApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CheckoutApplication.class, args);
+		SpringApplication.run(HelloWorldApplication.class, args);
 	}
 
 }

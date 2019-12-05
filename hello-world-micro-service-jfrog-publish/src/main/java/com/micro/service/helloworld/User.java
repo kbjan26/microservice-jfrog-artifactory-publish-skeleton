@@ -1,4 +1,4 @@
-package com.ecommerce.supermarket.checkout;
+package com.micro.service.helloworld;
 
 import lombok.Data;
 

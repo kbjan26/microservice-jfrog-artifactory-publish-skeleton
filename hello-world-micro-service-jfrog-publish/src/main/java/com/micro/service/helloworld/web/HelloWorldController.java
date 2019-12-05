@@ -1,9 +1,8 @@
-package com.ecommerce.supermarket.checkout.web;
+package com.micro.service.helloworld.web;
 
-import com.ecommerce.supermarket.checkout.User;
-import com.ecommerce.supermarket.checkout.config.CheckoutProperties;
-import com.ecommerce.supermarket.checkout.service.CheckoutService;
-import lombok.NonNull;
+import com.micro.service.helloworld.User;
+import com.micro.service.helloworld.config.HelloWorldProperties;
+import com.micro.service.helloworld.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,24 +11,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/checkout")
-public class CheckoutController {
+public class HelloWorldController {
 
     @Autowired
-    private CheckoutProperties checkoutProperties;
+    private HelloWorldProperties helloWorldProperties;
 
     @Autowired
-    private CheckoutService checkoutService;
+    private HelloWorldService helloWorldService;
 
     @GetMapping("/greetings")
     public String getGreetings(){
 
-        return checkoutProperties.getGreetings();
+        return helloWorldProperties.getGreetings();
     }
 
     @GetMapping("/user/{id}")
     public User getUser(@PathVariable Long id){
 
-        return checkoutService.getUser(id);
+        return helloWorldService.getUser(id);
 
     }
 }
